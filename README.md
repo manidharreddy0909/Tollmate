@@ -156,4 +156,4 @@ GitHub: [@manidharreddy0909](https://github.com/manidharreddy0909)
 
 ---
 
-⭐ If you find TollMate useful, consider giving the repository a star!
+⭐ If you find TollMate useful, consider giving the repository a star! and support the project
