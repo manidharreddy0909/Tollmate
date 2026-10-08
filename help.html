@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver Help - TollMate</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="TollMate logo"> TollMate</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plazas.html">Toll Plazas</a>
+      <a href="distance.html">Distance &amp; Toll</a>
+      <a href="balance.html">Balance Check</a>
+      <a href="help.html" class="active">Driver Help</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Driver Problem Solver</h1>
+    <p>Search a problem, read what to do, and jump to the right TollMate tool.</p>
+  </section>
+
+  <main>
+    <div class="contact">
+      <div class="card"><strong>1033</strong>NHAI highway helpline</div>
+      <div class="card"><strong>112</strong>National emergency number</div>
+      <div class="card"><strong>Tag</strong>Issuer care number is printed on your FASTag</div>
+    </div>
+
+    <h2>Find your problem</h2>
+    <div class="filters">
+      <div>
+        <label for="problem-search">Search</label>
+        <input type="text" id="problem-search" placeholder="e.g. deducted, scan, queue, pass">
+      </div>
+      <div>
+        <label for="problem-cat">Category</label>
+        <select id="problem-cat">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+    </div>
+    <p class="hint" id="problem-count"></p>
+
+    <div id="problem-list"></div>
+
+    <h2 id="checklist">Pre-trip checklist</h2>
+    <p class="sub">Tick each item before you leave. Most toll problems can be avoided here.</p>
+
+    <div class="card checklist" id="checklist-box">
+      <label><input type="checkbox"> FASTag is stuck firmly inside the windscreen</label>
+      <label><input type="checkbox"> Balance checked and enough for the trip</label>
+      <label><input type="checkbox"> Vehicle class on the tag matches my vehicle</label>
+      <label><input type="checkbox"> Issuer care number saved in my phone</label>
+      <label><input type="checkbox"> UPI or issuer app ready for a top-up</label>
+      <label><input type="checkbox"> Toll and fuel cost planned</label>
+      <label><input type="checkbox"> Tyres, fuel and lights checked</label>
+      <div class="progress"><div id="check-bar"></div></div>
+      <p class="hint" id="check-text">0 of 7 done</p>
+    </div>
+
+    <p class="note">Toll rules, penalties and helpline details can change. Always confirm the latest information from official NHAI sources or your tag issuer.</p>
+  </main>
+
+  <footer>
+    <p>TollMate - a student project built with HTML, CSS and JavaScript. Plaza data is for demonstration only.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

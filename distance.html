@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distance and Toll - TollMate</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="TollMate logo"> TollMate</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plazas.html">Toll Plazas</a>
+      <a href="distance.html" class="active">Distance &amp; Toll</a>
+      <a href="balance.html">Balance Check</a>
+      <a href="help.html">Driver Help</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Distance &amp; Toll Calculator</h1>
+    <p>Know how far it is and exactly how much toll you will pay.</p>
+  </section>
+
+  <main>
+    <form class="card" id="distance-form">
+      <label for="from">Start plaza</label>
+      <select id="from"></select>
+
+      <label for="to">End plaza</label>
+      <select id="to"></select>
+
+      <label for="vehicle">Vehicle type</label>
+      <select id="vehicle">
+        <option value="car">Car / Jeep / Van</option>
+        <option value="lcv">Light commercial vehicle</option>
+        <option value="truck">Bus / Truck</option>
+        <option value="multi">Multi-axle vehicle</option>
+      </select>
+
+      <label for="mileage">Your vehicle mileage (km per litre)</label>
+      <input type="number" id="mileage" min="1" value="15">
+
+      <label for="fuel">Fuel price (&#8377; per litre)</label>
+      <input type="number" id="fuel" min="1" value="100">
+
+      <button class="btn" type="submit">Calculate</button>
+    </form>
+
+    <div id="distance-result" class="result" hidden></div>
+
+    <p class="note">Distance is the difference between the two kilometre marks on the same corridor. Toll for non-car vehicles uses demo multipliers. Real rates differ, so check the official rate at the plaza.</p>
+
+    <h2 id="pass">Is the annual pass worth it?</h2>
+    <p class="sub">Compare paying toll on every trip with buying a yearly pass. Calculate a trip above and the first two boxes fill in automatically.</p>
+
+    <form class="card" id="pass-form">
+      <label for="pass-toll">Toll per trip (&#8377;)</label>
+      <input type="number" id="pass-toll" min="1" placeholder="e.g. 325" required>
+
+      <label for="pass-plazas">Toll plazas crossed per trip</label>
+      <input type="number" id="pass-plazas" min="1" value="1" required>
+
+      <label for="pass-trips">Trips you make in a year</label>
+      <input type="number" id="pass-trips" min="1" placeholder="e.g. 120" required>
+
+      <button class="btn" type="submit">Compare</button>
+    </form>
+
+    <div id="pass-result" class="result" hidden></div>
+
+    <p class="note">The pass price and crossing limit are set at the top of <code>js/data.js</code>. Annual passes are meant for private non-commercial vehicles. Confirm the current price and rules on the official NHAI website.</p>
+  </main>
+
+  <footer>
+    <p>TollMate - a student project built with HTML, CSS and JavaScript. Plaza data is for demonstration only.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toll Plaza Finder - TollMate</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="TollMate logo"> TollMate</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plazas.html" class="active">Toll Plazas</a>
+      <a href="distance.html">Distance &amp; Toll</a>
+      <a href="balance.html">Balance Check</a>
+      <a href="help.html">Driver Help</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Toll Plaza Finder</h1>
+    <p>Search toll plazas by name or filter by corridor.</p>
+  </section>
+
+  <main>
+    <div class="filters">
+      <div>
+        <label for="search">Search by name</label>
+        <input type="text" id="search" placeholder="e.g. Lakeside">
+      </div>
+      <div>
+        <label for="corridor">Corridor</label>
+        <select id="corridor">
+          <option value="all">All corridors</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid" id="plaza-list"></div>
+
+    <p class="note">The plazas shown here are demo data. Replace them in <code>js/data.js</code> with real toll plaza details from official NHAI sources.</p>
+  </main>
+
+  <footer>
+    <p>TollMate - a student project built with HTML, CSS and JavaScript. Plaza data is for demonstration only.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

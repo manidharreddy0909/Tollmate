@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balance Check - TollMate</title>
+  <link rel="icon" href="images/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="TollMate logo"> TollMate</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="plazas.html">Toll Plazas</a>
+      <a href="distance.html">Distance &amp; Toll</a>
+      <a href="balance.html" class="active">Balance Check</a>
+      <a href="help.html">Driver Help</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Is My Balance Enough?</h1>
+    <p>Enter your FASTag balance and trip to see if you need to recharge.</p>
+  </section>
+
+  <main>
+    <form class="card" id="balance-form">
+      <label for="balance">Current FASTag balance (&#8377;)</label>
+      <input type="number" id="balance" min="0" placeholder="e.g. 300" required>
+
+      <label for="from">Start plaza</label>
+      <select id="from"></select>
+
+      <label for="to">End plaza</label>
+      <select id="to"></select>
+
+      <label for="vehicle">Vehicle type</label>
+      <select id="vehicle">
+        <option value="car">Car / Jeep / Van</option>
+        <option value="lcv">Light commercial vehicle</option>
+        <option value="truck">Bus / Truck</option>
+        <option value="multi">Multi-axle vehicle</option>
+      </select>
+
+      <label class="check"><input type="checkbox" id="return-trip"> Include the return trip</label>
+
+      <button class="btn" type="submit">Check balance</button>
+    </form>
+
+    <div id="balance-result" class="result" hidden></div>
+
+    <h2>How to check your real balance</h2>
+    <p class="sub">This page only compares the number you enter with the trip toll. To see your actual balance:</p>
+
+    <div class="grid">
+      <div class="card"><div class="icon">📱</div><h3>Issuer app</h3><p>Open the mobile app or website of the bank or company that issued your FASTag.</p></div>
+      <div class="card"><div class="icon">💬</div><h3>SMS alerts</h3><p>Your issuer usually sends a message after every toll deduction showing the balance.</p></div>
+      <div class="card"><div class="icon">📞</div><h3>Helpline</h3><p>Call the customer care number printed on your tag, or the NHAI helpline 1033.</p></div>
+    </div>
+
+    <p class="note">Tip: keep a small extra amount in your tag so a slightly higher toll does not block your vehicle at the gate.</p>
+  </main>
+
+  <footer>
+    <p>TollMate - a student project built with HTML, CSS and JavaScript. Plaza data is for demonstration only.</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
